@@ -1,0 +1,66 @@
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+
+<ion-content>
+  <h2 class = "heading">Upcoming Events</h2>
+  <!----<ion-list>
+    <ion-item-sliding *ngFor="let info of infos">
+      <ion-item detail lines="full" routerLink="/detail/{{info.key}}">
+        <ion-icon name="desktop" slot="start"></ion-icon>
+        {{info.info_title}}
+      </ion-item>
+      <!----<img src="{{getImage()}}"/>-->
+      
+      
+     
+      
+
+     
+   <!---- </ion-item-sliding>
+  </ion-list>-->
+
+
+ <!--- <ion-card id = "car">
+    <ion-card-header *ngFor="let info of infos">
+      <ion-card-subtitle>{{info.info_description}}</ion-card-subtitle>
+      <ion-card-title>{{info.info_title}}</ion-card-title>
+      <img src="{{getImage()}}"/>
+    </ion-card-header>
+  </ion-card>-->
+  <div class = "car" *ngFor="let info of infos">
+      <img class = "imageDesc" src="{{getImage()}}"/>
+      <div class="uk-panel">
+          <h1 class="uk-align-left uk-margin-remove-adjacent dateNo">{{info.date}}</h1>
+          <p class = "month">{{info.month}}</p>
+          <hr class = "hr"/>
+          <p class = "place">{{info.info_title}}</p>
+          <div class = "interested">
+              <button class="button">Interested?</button>
+              <button class="button">Ignore</button></div>
+              
+              
+              
+              <p class = "uk-align-left views">{{info.views}}<i class="material-icons">
+                  remove_red_eye
+                  </i></p><p class = "uk-align-right likes">{{info.likes}}<i class="material-icons">
+                      favorite_border
+                      </i></p>
+
+      </div>
+    
+   
+    
+   
+  </div>
+ 
+</ion-content>
